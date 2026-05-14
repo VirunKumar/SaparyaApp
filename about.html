@@ -3,112 +3,215 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Saparya</title>
+    <title>Saparya | Devotion Delivered</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Segoe UI', sans-serif; margin: 0; color: #333; line-height: 1.6; }
-        /* Navigation */
+        :root {
+            --maroon: #7b1e1a;     /* Deep Kumkum Red */
+            --gold: #c5a059;       /* Antique Gold */
+            --cream: #faf5eb;      /* Sandalwood Cream */
+            --dark-wood: #3e2723;  /* Espresso text */
+            --white: #ffffff;
+        }
+
+        body { 
+            font-family: 'Lato', sans-serif; 
+            margin: 0; 
+            background-color: var(--cream); 
+            color: var(--dark-wood); 
+            line-height: 1.8; 
+        }
+
+        h1, h2, h3 { 
+            font-family: 'Cinzel', serif; 
+            color: var(--maroon); 
+            font-weight: 700;
+        }
+
+        /* --- Elegant Top Navigation --- */
         nav { 
-            background: #2c3e50; 
-            padding: 1rem 5%; 
+            background: var(--maroon); 
+            padding: 15px 5%; 
             display: flex; 
             justify-content: space-between; 
             align-items: center; 
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-bottom: 4px solid var(--gold);
+            position: sticky; top: 0; z-index: 1000;
         }
-        nav .logo { 
-            color: #e67e22; 
-            font-size: 1.8rem; 
-            font-weight: bold; 
-            text-decoration: none; 
-            letter-spacing: 1px;
+
+        .logo { 
+            font-family: 'Cinzel', serif; 
+            font-size: 2.2rem; 
+            color: var(--gold); 
+            text-decoration: none;
+            letter-spacing: 2px;
         }
-        nav div a { 
-            color: white; 
+
+        nav .nav-links a { 
+            color: var(--cream); 
             text-decoration: none; 
-            margin-left: 25px; 
-            font-weight: 500; 
+            margin-left: 30px; 
+            font-size: 0.95rem; 
+            text-transform: uppercase; 
+            letter-spacing: 1.5px;
             transition: 0.3s;
         }
-        nav div a:hover { 
-            color: #e67e22; 
-        }
-        .container { max-width: 800px; margin: 50px auto; padding: 0 20px; }
-        h1 { color: #2c3e50; border-left: 5px solid #e67e22; padding-left: 15px; }
-        .mission { background: #fff3e6; padding: 20px; border-radius: 8px; margin-top: 20px; }
-          /* Footer */
-        footer { 
-            background: #2c3e50; 
-            color: white; 
+
+        nav .nav-links a:hover { color: var(--gold); }
+
+        /* --- Hero Section --- */
+        .hero { 
             text-align: center; 
-            padding: 50px 20px; 
-            margin-top: 60px; 
+            padding: 100px 20px; 
+            background: radial-gradient(circle, var(--white) 0%, var(--cream) 100%);
+            border-bottom: 2px dashed var(--gold);
         }
 
-        footer a { 
-            color: #e67e22; 
+        .hero h1 { 
+            font-size: 3.5rem; 
+            margin-bottom: 10px; 
+            letter-spacing: 1px;
+        }
+
+        .hero p { 
+            font-size: 1.2rem; 
+            max-width: 605px; 
+            margin: 0 auto 30px auto; 
+            color: var(--dark-wood);
+        }
+
+        .divider {
+            height: 3px;
+            width: 80px;
+            background-color: var(--gold);
+            margin: 20px auto;
+        }
+
+        /* --- Heritage Buttons --- */
+        .btn-gold {
+            background: var(--gold);
+            color: var(--maroon);
+            padding: 14px 35px;
+            font-family: 'Cinzel', serif;
+            font-weight: 700;
+            font-size: 1.1rem;
+            text-decoration: none;
+            border: 2px solid var(--gold);
+            transition: 0.3s;
+            display: inline-block;
+            letter-spacing: 1px;
+        }
+
+        .btn-gold:hover {
+            background: transparent;
+            color: var(--maroon);
+        }
+
+        /* --- Framed Services Section --- */
+        .container { max-width: 1100px; margin: 80px auto; padding: 0 20px; }
+        
+        .services-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 40px; 
+        }
+
+        .service-box { 
+            background: var(--white);
+            padding: 50px 30px;
+            text-align: center;
+            border: 1px solid #ebd9c8;
+            outline: 2px solid var(--gold);
+            outline-offset: -10px;
+            transition: 0.4s ease;
+        }
+
+        .service-box:hover {
+            background: var(--maroon);
+            outline-color: var(--cream);
+            color: var(--cream);
+        }
+
+        .service-box:hover h3, .service-box:hover p { color: var(--cream); }
+
+        .service-box h3 { font-size: 1.6rem; margin-bottom: 15px; transition: 0.3s; }
+        .service-box p { font-size: 1rem; transition: 0.3s; }
+        .icon { font-size: 3rem; margin-bottom: 15px; }
+
+        /* --- Royal Footer --- */
+        footer { 
+            background: var(--dark-wood); 
+            color: var(--cream); 
+            padding: 60px 20px 30px; 
+            text-align: center;
+            border-top: 5px solid var(--maroon);
+        }
+
+        footer .logo { font-size: 2rem; margin-bottom: 20px; display: block; }
+        
+        .footer-links { margin: 30px 0; }
+        .footer-links a { 
+            color: var(--gold); 
             text-decoration: none; 
-            font-weight: 500;
+            margin: 0 15px; 
+            font-size: 0.9rem; 
+            text-transform: uppercase;
         }
 
-        .footer-play-badge { 
-            height: 50px; 
-            margin-top: 15px; 
-            margin-bottom: 25px;
-        }
-
-        .footer-links {
-            margin-top: 20px;
-            font-size: 0.9rem;
-            opacity: 0.8;
+        @media (max-width: 768px) {
+            nav { flex-direction: column; }
+            nav .nav-links { margin-top: 20px; }
+            nav .nav-links a { margin: 0 10px; }
+            .hero h1 { font-size: 2.5rem; }
         }
     </style>
 </head>
 <body>
+
     <nav>
-        <div style="color: #e67e22; font-size: 1.5rem; font-weight: bold;">Saparya</div>
-        <div>
-            <a href="index.html">Home</a> |
-            <a href="about.html">About Us</a> |
-            <a href="contact.html">Contact Us</a> |
-            <a href="data-deletion-request.html">Data Deletion Request</a>
+        <a href="index.html" class="logo">Saparya</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">Our Roots</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="data-deletion-request.html">Privacy</a>
         </div>
     </nav>
 
-    <div class="container">
-        <h1>Our Story</h1>
-        <p>In a fast-paced world, finding the time and right resources for traditional rituals can be challenging. <strong>Saparya</strong> was founded to bridge the gap between tradition and convenience.</p>
-        
-        <div class="mission">
-            <h3>Our Mission</h3>
-            <p>To provide every household with authentic, high-quality Pooja essentials and direct access to learned priests, ensuring your spiritual journey is seamless and sacred.</p>
-        </div>
+<header class="hero" style="padding: 60px 20px 20px;">
+        <div class="divider"></div>
+        <h1>Our Roots</h1>
+    </header>
 
-        <h3>Why Choose Us?</h3>
-        <ul>
-            <li><strong>Authenticity:</strong> All items are handpicked for ritual purity.</li>
-            <li><strong>Verified Priests:</strong> We partner with experienced priests who value tradition.</li>
-            <li><strong>Secure Delivery:</strong> Timely doorstep delivery with Razorpay and COD options.</li>
-        </ul>
+    <div class="container" style="margin-top: 20px;">
+        <div class="service-box" style="max-width: 800px; margin: 0 auto; text-align: left;">
+            <p style="font-size: 1.1rem;">In a fast-paced world, finding the time and right resources for traditional rituals can be challenging. <strong>Saparya</strong> was founded to bridge the gap between tradition and convenience.</p>
+            
+            <h3 style="color: var(--maroon); margin-top: 40px;">Our Mission</h3>
+            <p>To provide every household with authentic, high-quality Pooja essentials and direct access to learned priests, ensuring your spiritual journey is seamless and sacred.</p>
+            
+            <h3 style="color: var(--maroon); margin-top: 40px;">Why Choose Saparya?</h3>
+            <ul style="list-style-type: square; padding-left: 20px; line-height: 2;">
+                <li><strong>Authenticity:</strong> All items are handpicked for ritual purity.</li>
+                <li><strong>Verified Priests:</strong> We partner with experienced priests who deeply value Vedic traditions.</li>
+                <li><strong>Secure Delivery:</strong> Timely doorstep delivery with Razorpay and COD options.</li>
+            </ul>
+        </div>
     </div>
      <footer>
-         <div style="margin-bottom: 15px;">
-         <p>Download the Saparya App</p>
-         <a href="https://play.google.com/store/apps/details?id=com.saparya.supply">
-                <img alt="Get it on Google Play" src="https://lh3.googleusercontent.com/x3x3ei1idA79ULy9z2r298SHtafjMrFjHtFq221fT0z_whW5BhXzV1LQuSKsDDa8L3Ys2Ee6lGYkhO9w2fa8" style="height: 60px;">
-            </a>
-    </div>
-        <p>&copy; 2026 Saparya. All Rights Reserved. 
-           
-        </p>
+        <a href="index.html" class="logo">Saparya</a>
+        <p>Plot No: 8, Sri Tirumala Township, Patiguda, Turkayamjal<br>Hyderabad — 501510, Telangana</p>
+        
         <div class="footer-links">
-                <a href="privacypolicy.html">Privacy Policy</a> | 
-                <a href="data-deletion-request.html">Data Deletion Request</a> |
-                <a href="about.html">About Us</a> |
-                <a href="contact.html">Contact Us</a>
-            </div>
+            <a href="privacypolicy.html">Privacy Policy</a>
+            <a href="data-deletion-request.html">Data Deletion</a>
+            <a href="about.html">About Us</a>
+        </div>
+        
+        <p style="font-size: 0.8rem; opacity: 0.6; margin-top: 40px;">
+            © 2026 Saparya. All Rights Reserved.
+        </p>
     </footer>
+
 </body>
 </html>
