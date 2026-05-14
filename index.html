@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saparya | Bringing Devotion to Your Doorstep</title>
+    <style>
+        /* Global Styles */
+        body { 
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
+            margin: 0; 
+            color: #333; 
+            line-height: 1.6; 
+            background-color: #fcfcfc; 
+        }
+
+        /* Navigation */
+        nav { 
+            background: #2c3e50; 
+            padding: 1rem 5%; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        nav .logo { 
+            color: #e67e22; 
+            font-size: 1.8rem; 
+            font-weight: bold; 
+            text-decoration: none; 
+            letter-spacing: 1px;
+        }
+        nav div a { 
+            color: white; 
+            text-decoration: none; 
+            margin-left: 25px; 
+            font-weight: 500; 
+            transition: 0.3s;
+        }
+        nav div a:hover { 
+            color: #e67e22; 
+        }
+
+        /* Premium Hero Section */
+         /* Compact Hero Section */
+    .hero { 
+        background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                    url('https://unsplash.com'); 
+        height: 60vh; /* Reduced from 600px to 60% of screen height */
+        min-height: 290px; 
+        background-size: cover; 
+        background-position: center;
+        color: white; 
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+        text-align: center;
+        padding: 0 20px;
+    }
+
+    .hero-content {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        padding: 30px; /* Reduced padding */
+        border-radius: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        max-width: 833px;
+    }
+
+    .hero h1 { 
+        font-size: 2.8rem; /* Slightly smaller font */
+        margin: 0 0 10px 0; 
+        font-family: 'Georgia', serif;
+    }
+
+    .hero p { 
+        font-size: 1.1rem; /* More compact text */
+        margin-bottom: 25px; 
+        color: #f1f1f1;
+    }
+
+    .cta-buttons {
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .btn-main {
+        background: #e67e22;
+        color: white;
+        padding: 12px 30px; /* Smaller button */
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+
+    .play-badge-hero {
+        height: 50px; /* Smaller Play Store badge */
+    }
+
+    /* Mobile adjustments */
+    @media (max-width: 768px) {
+        .hero { height: auto; padding: 50px 20px; }
+        .hero h1 { font-size: 2rem; }
+    }
+
+        /* Services Section */
+        .services { 
+            display: flex; 
+            justify-content: space-around; 
+            padding: 80px 5%; 
+            max-width: 1200px; 
+            margin: auto; 
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .card { 
+            background: white;
+            border: 1px solid #eee; 
+            padding: 40px 25px; 
+            border-radius: 15px; 
+            flex: 1;
+            min-width: 280px;
+            text-align: center; 
+            transition: 0.3s ease; 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .card:hover { 
+            transform: translateY(-10px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+        }
+
+        .card h3 { 
+            color: #2c3e50; 
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .card p { color: #666; font-size: 1rem; }
+
+        /* Footer */
+        footer { 
+            background: #2c3e50; 
+            color: white; 
+            text-align: center; 
+            padding: 50px 20px; 
+            margin-top: 60px; 
+        }
+
+        footer a { 
+            color: #e67e22; 
+            text-decoration: none; 
+            font-weight: 500;
+        }
+
+        .footer-play-badge { 
+            height: 50px; 
+            margin-top: 15px; 
+            margin-bottom: 25px;
+        }
+
+        .footer-links {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .hero-content { padding: 30px 20px; }
+            nav { flex-direction: column; gap: 15px; }
+            nav div a { margin: 0 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div style="color: #e67e22; font-size: 1.5rem; font-weight: bold;">Saparya</div>
+        <div>
+            <a href="index.html">Home</a> |
+            <a href="about.html">About Us</a> |
+            <a href="contact.html">Contact Us</a> |
+            <a href="data-deletion-request.html">Data Deletion Request</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Bringing Devotion to Your Doorstep</h1>
+            <p>Your one-stop destination for Premium Pooja Kits and Verified Priest Services across India.</p>
+            
+            <div class="cta-buttons">
+                 <p>Download the Saparya App</p>
+              
+                <!-- Replace [PACKAGE_NAME] with your Play Store ID -->
+                 <a href="https://play.google.com/store/apps/details?id=com.saparya.supply">
+                    
+                <img alt="Get it on Google Play" height="60px" width="60px" src="https://lh3.googleusercontent.com/x3x3ei1idA79ULy9z2r298SHtafjMrFjHtFq221fT0z_whW5BhXzV1LQuSKsDDa8L3Ys2Ee6lGYkhO9w2fa8" style="height: 60px;">
+            </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="card">
+            <div style="font-size: 3rem; margin-bottom: 10px;">🕯️</div>
+            <h3>Complete Pooja Kits</h3>
+            <p>Specially curated kits for every ritual, containing authentic and high-quality items for a complete spiritual experience.</p>
+        </div>
+        <div class="card">
+            <div style="font-size: 3rem; margin-bottom: 10px;">🙏</div>
+            <h3>Book a Priest</h3>
+            <p>Connect with learned and verified priests for home, office, or temple rituals at your convenience.</p>
+        </div>
+        <div class="card">
+            <div style="font-size: 3rem; margin-bottom: 10px;">📦</div>
+            <h3>Essential Items</h3>
+            <p>Shop for individual puja essentials like pure ghee, premium incense, and ritual-specific copperware.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div style="max-width: 1200px; margin: auto;">
+            <p>Download the Saparya App</p>
+         <a href="https://play.google.com/store/apps/details?id=com.saparya.supply">
+                <img alt="Get it on Google Play" src="https://lh3.googleusercontent.com/x3x3ei1idA79ULy9z2r298SHtafjMrFjHtFq221fT0z_whW5BhXzV1LQuSKsDDa8L3Ys2Ee6lGYkhO9w2fa8" style="height: 60px;">
+            </a>
+            
+            <p>&copy; 2026 Saparya. All Rights Reserved.</p>
+            
+            <div class="footer-links">
+                <a href="privacypolicy.html">Privacy Policy</a> | 
+                <a href="data-deletion-request.html">Data Deletion Request</a> |
+                <a href="about.html">About Us</a> |
+                <a href="contact.html">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
